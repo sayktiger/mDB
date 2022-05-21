@@ -26,9 +26,17 @@ const movieDB = {
 
 const sponsors = document.querySelector(`.promo__adv`),
     bg = document.querySelector(`.promo__bg`),
-    genres = bg.querySelector(`.promo__genre`);
+    genres = bg.querySelector(`.promo__genre`),
+    listMovie = document.querySelectorAll(`.promo__interactive-item`);
 
 sponsors.remove();
 genres.textContent = `Драма`;
 bg.style.cssText = `background : url("/img/bg.jpg") center center/cover no-repeat; `;
-console.log(genres);
+
+listMovie.forEach((item, i) => {
+    movieDB.movies.sort();
+    item.textContent = movieDB.movies[i];
+    
+});
+
+console.log(listMovie);
