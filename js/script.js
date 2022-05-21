@@ -24,3 +24,7 @@ const movieDB = {
     ]
 };
 
+const sponsors = document.querySelector(`.promo__adv`);
+
+sponsors.remove();
+console.log(sponsors);
