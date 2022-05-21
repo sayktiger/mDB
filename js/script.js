@@ -35,8 +35,8 @@ bg.style.cssText = `background : url("/img/bg.jpg") center center/cover no-repea
 
 listMovie.forEach((item, i) => {
     movieDB.movies.sort();
-    item.textContent = movieDB.movies[i];
-    
+    item.textContent = `${i+1}.${movieDB.movies[i]}`;
+
 });
 
 console.log(listMovie);
