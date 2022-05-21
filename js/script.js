@@ -24,7 +24,10 @@ const movieDB = {
     ]
 };
 
-const sponsors = document.querySelector(`.promo__adv`);
+const sponsors = document.querySelector(`.promo__adv`),
+    bg = document.querySelector(`.promo__bg`),
+    genres = bg.querySelector(`.promo__genre`);
 
 sponsors.remove();
-console.log(sponsors);
+genres.textContent = `Драма`;
+console.log(genres);
