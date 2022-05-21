@@ -27,16 +27,20 @@ const movieDB = {
 const sponsors = document.querySelector(`.promo__adv`),
     bg = document.querySelector(`.promo__bg`),
     genres = bg.querySelector(`.promo__genre`),
-    listMovie = document.querySelectorAll(`.promo__interactive-item`);
+    listMovie = document.querySelector(`.promo__interactive-list`);
 
 sponsors.remove();
 genres.textContent = `Драма`;
 bg.style.cssText = `background : url("/img/bg.jpg") center center/cover no-repeat; `;
 
-listMovie.forEach((item, i) => {
-    movieDB.movies.sort();
-    item.textContent = `${i+1}.${movieDB.movies[i]}`;
-
+listMovie.innerHTML = ``;
+movieDB.movies.sort();
+movieDB.movies.forEach((item, i) => {
+    listMovie.innerHTML += `
+    <li class="promo__interactive-item">${i+1}.${item}
+        <div class="delete"></div>
+    </li>`;
+    
 });
 
 console.log(listMovie);
