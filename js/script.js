@@ -30,4 +30,5 @@ const sponsors = document.querySelector(`.promo__adv`),
 
 sponsors.remove();
 genres.textContent = `Драма`;
+bg.style.cssText = `background : url("/img/bg.jpg") center center/cover no-repeat; `;
 console.log(genres);
